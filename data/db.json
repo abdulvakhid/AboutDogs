@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "email": "buriyevabdulvohid055@gmail.com",
+      "password": "$2a$10$HJ6HMCpV06IqZkCEC63V3uBSIUtExceaYvJGB0B2dkd8yk5eTk9vi",
+      "name": "ws",
+      "number": "998915555555",
+      "login": "dsdssd",
+      "id": 1
+    },
+    {
+      "email": "buriyevabvcvdulvohid055@gmail.com",
+      "password": "$2a$10$jrQsbvSh7vuxjYKwYjrH3OsPVNn4oRMDmvR.oi/CT8XAqKtHzpcL.",
+      "login": "abdulvakhid",
+      "name": "Abdulvohid",
+      "number": "998915555555",
+      "id": 2
+    },
+    {
+      "email": "hid055@gmail.com",
+      "password": "$2a$10$HyAZui7HJcjMmtHGXgqTIeff8HIAXlRp1lL9Tkm6BWHC2jp9sm0zG",
+      "login": "ashurov.shaxboz",
+      "name": "ght",
+      "number": "998915555555",
+      "id": 3
+    },
+    {
+      "email": "8uyt5@gmail.com",
+      "password": "$2a$10$0umo8uyMJo2oLzZj/LIAwOk0ARjXHbmjTwXwjRTKty23HQCJ/cym6",
+      "login": "wdwdwd",
+      "name": "werty",
+      "number": "998915555555",
+      "id": 4
+    },
+    {
+      "email": "er@gmail.com",
+      "password": "$2a$10$tOyJqGrmuBxOATAVbxqPi.BAXwb3LB0sjfBAvS0P0kUUeOKLjtn1q",
+      "login": "fghjklk",
+      "name": "kjhh",
+      "number": "998915555555",
+      "id": 5
+    },
+    {
+      "email": "sdf@gmail.com",
+      "password": "$2a$10$XbD4PheZZB4N/IXVQbkRaenwWhl2KuMcpIORbVND6egA8ZEIbs8ia",
+      "login": "drftgyhu",
+      "name": "kijuhygtfre",
+      "number": "998915555555",
+      "id": 6
+    },
+    {
+      "email": "b@gmail.com",
+      "password": "$2a$10$UNCFA2ZcSxWk6eNr2p3rjenBS16cF6qpXOA2WtHZrg6aAjjK854Me",
+      "login": "wertyty",
+      "name": "ert",
+      "number": "998915555555",
+      "id": 7
+    },
+    {
+      "email": "hh@gmail.com",
+      "password": "$2a$10$5TA2iUbmydw9B2WBUEOoLu4/7m3tyxj9igNqFUbUiWgEAfGv6lfCm",
+      "login": "sdefrtgyhujioppoikjuhgf",
+      "name": "dfghjkl",
+      "number": "998915555555",
+      "id": 8
+    },
+    {
+      "email": "wwwww@gmail.com",
+      "password": "$2a$10$C/PzQj5YjOO.NoHh2hKWbONnrJklZgd8N4szakD3PADpO3o0F0gS2",
+      "login": "dfrtye",
+      "name": "yyyyyyytr",
+      "number": "998915555555",
+      "id": 9
+    }
+  ]
+}

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { Main } from "./components/Main/Main";
+import { Profile } from "./components/Profile/Profile";
+import { Register } from "./components/Register/Register";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// const navigate = useNavigate();
+	// const token = localStorage.getItem("token");
+	// if (!token) {
+	// 	navigate("/register");
+	// }
+
+	return (
+		<>
+			<Routes>
+				<Route path="/" element={<Main />} />
+				<Route path="/register" element={<Register />} />
+				<Route path="/profile" element={<Profile />} />
+			</Routes>
+		</>
+	);
 }
 
 export default App;
