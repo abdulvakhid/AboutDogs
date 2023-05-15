@@ -6,7 +6,6 @@ import { UserContext } from "../../context/User-context";
 export const Profile = () => {
 	const back = useNavigate();
 	const { user } = useContext(UserContext);
-	console.log(user);
 
 	return (
 		<Container maxWidth="xl">
@@ -65,9 +64,17 @@ export const Profile = () => {
 							{user.number}
 						</ListItem>
 					</Grid>
-					{/* <Grid item xs={12} sm={6} md={8}>
-					
-					</Grid> */}
+					<Grid item xs={12} sm={12} md={12}>
+						<ListItem
+							sx={{
+								mt: "15px",
+								textAlign: "center",
+								color: "#132F4C",
+								fontSize: "24px",
+							}}>
+							<Box sx={{ color: "#F5F5F5", mr: "10px" }}>Birtday:</Box> {user.date}
+						</ListItem>
+					</Grid>
 				</Grid>
 			</Box>
 		</Container>

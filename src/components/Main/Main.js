@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Header } from "../Header/Header";
 import {
 	Container,
-	Grid,
 	ImageList,
 	ImageListItem,
 	Typography,
@@ -22,7 +21,6 @@ export const Main = () => {
 		axios
 			.get("https://dog.ceo/api/breed/hound/images")
 			.then((res) => {
-				console.log(res.data.message);
 				Setdog(res.data.message);
 			})
 			.catch((err) => console.log(err));
@@ -41,14 +39,6 @@ export const Main = () => {
 					}}>
 					Dogs
 				</Typography>
-				{/* <Grid sx={{ display: "grid" }} container spacing={1}>
-					{dog.map((item, index) => (
-						<Grid sx={{width:"250px", height:"250px"}} item xs={12} sm={6} md={4}>
-							<img  src={item} alt="sdfg" />
-						</Grid>
-					))}
-				</Grid> */}
-
 				<ImageList sx={{ width:"100%", heigth:"100%"  }} cols={4}  gap={8}>
 					{dog.map((item) => (
 						<ImageListItem key={item}>

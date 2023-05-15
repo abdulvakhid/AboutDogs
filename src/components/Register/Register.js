@@ -4,7 +4,6 @@ import {
 	TextField,
 	InputAdornment,
 	Button,
-	MenuItem,
 } from "@mui/material";
 import { Stack } from "@mui/system";
 import React, { useContext, useState } from "react";
@@ -16,6 +15,8 @@ import axios from "axios";
 import { AuthContext } from "../../context/Auth-context.js";
 import { UserContext } from "../../context/User-context.js";
 import { useNavigate } from "react-router-dom";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 export const Register = () => {
 	const [passwordType, SetPasswordType] = useState(false);
@@ -39,6 +40,7 @@ export const Register = () => {
 			// .max(8, "not more than 8 character")
 			.required("Required")
 			.matches(regpasword, "At least 1 character and 1 number"),
+		date: yup.string().required("Required"),
 	});
 
 	const {
@@ -53,10 +55,17 @@ export const Register = () => {
 			number: "",
 			email: "",
 			password: "",
+			date: "",
 		},
 		resolver: yupResolver(validating),
 	});
 
+	const [birthdate, setBirthdate] = useState("");
+	const [isAbove18, setIsAbove18] = useState(false);
+
+	const handleInputChange = (event) => {
+		setBirthdate(event.target.value);
+	};
 	const onSubmit = (data) => {
 		axios
 			.post("http://localhost:7777/users", data)
@@ -70,6 +79,17 @@ export const Register = () => {
 				}
 			})
 			.catch((error) => console.log(error));
+
+		const today = new Date();
+		const birthdateObj = new Date(birthdate);
+		console.log(birthdate);
+		
+		const age = today.getFullYear() - birthdateObj.getFullYear();
+			console.log(age);
+		// Check if the calculated age is above 18
+		if(age >=0){
+		alert('Age must be above ')
+		}
 	};
 
 	return (
@@ -89,19 +109,21 @@ export const Register = () => {
 						label="login"
 						helperText={errors.login?.message}
 						variant="outlined"
+						placeholder="login"
 						{...register("login")}
 					/>
 					<TextField
 						label="name"
 						helperText={errors.name?.message}
 						variant="outlined"
+						placeholder="John"
 						{...register("name")}
 					/>
 					<TextField
 						label="number"
 						helperText={errors.number?.message}
 						variant="outlined"
-						placeholder="998915868598"
+						placeholder="998901234567"
 						{...register("number")}
 					/>
 					<TextField
@@ -109,6 +131,7 @@ export const Register = () => {
 						label="Email"
 						helperText={errors.email?.message}
 						variant="outlined"
+						placeholder="example@example.com"
 						{...register("email")}
 					/>
 					<TextField
@@ -116,6 +139,7 @@ export const Register = () => {
 						label="Password"
 						helperText={errors.password?.message}
 						variant="outlined"
+						placeholder="password123"
 						{...register("password")}
 						InputProps={{
 							endAdornment: (
@@ -126,6 +150,15 @@ export const Register = () => {
 								</InputAdornment>
 							),
 						}}
+					/>
+					<TextField
+						type="date"
+						helperText={errors.date?.message}
+						variant="outlined"
+						placeholder="00.00.0000"
+						defaultValue={birthdate}
+						onChange={handleInputChange}
+						{...register("date")}
 					/>
 				</Stack>
 				<Button disabled={!isValid} type="submit" variant="contained">
@@ -138,7 +171,7 @@ export const Register = () => {
 					<Button
 						sx={{ marginLeft: "15px" }}
 						type="button"
-						onClick={() => navigate("")}>
+						onClick={() => navigate("/login")}>
 						Sign in
 					</Button>
 				</Typography>
