@@ -5,6 +5,8 @@
 
 # Download and Write these commands
 
+install node modules
+## `npm i` 
 
 In the project directory, you should run server:
 ### `npm run server`
