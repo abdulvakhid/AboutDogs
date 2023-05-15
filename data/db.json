@@ -185,6 +185,15 @@
       "number": "998915555555",
       "date": "2023-05-01",
       "id": 22
+    },
+    {
+      "email": "qwer@gmail.com",
+      "password": "$2a$10$Dcv8zmRjdOeFHk6Br1zvReZWiLktNvEVUI0Iz524RlcSpXmS4x6gK",
+      "login": "jhgfds",
+      "name": "sdfghjk",
+      "number": "998915555555",
+      "date": "2023-05-11",
+      "id": 23
     }
   ]
 }

@@ -39,7 +39,7 @@ export const Main = () => {
 					}}>
 					Dogs
 				</Typography>
-				<ImageList sx={{ width:"100%", heigth:"100%"  }} cols={4}  gap={8}>
+				<ImageList sx={{ width:"90%", heigth:"90%", mx:"auto"  }} cols={3}   gap={8}>
 					{dog.map((item) => (
 						<ImageListItem key={item}>
 							<img 
